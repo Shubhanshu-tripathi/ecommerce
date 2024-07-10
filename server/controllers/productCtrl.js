@@ -6,9 +6,9 @@ const Products = require("../models/productModel");
 class APIfeatures {
   constructor(query, queryString) {
     this.query = query;
-    this.queryString = queryString;
+    this.queryString = queryString; 
   }
-
+  
   filtering() {
     const queryObj = { ...this.queryString };
 
@@ -112,7 +112,7 @@ const productCtrl = {
     try {
       await Products.findByIdAndDelete(req.params.id);
       res.json({ msg: "Deleted a Product" });
-    } catch (err) {
+    } catch (err) {       
       return res.status(500).json({ msg: err.message });
     }
   },

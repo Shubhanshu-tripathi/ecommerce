@@ -8,7 +8,7 @@ const productSchema = new mongoose.Schema({
         required:true
     },   
     title:{
-        type:String,
+        type:String,   
         trim:true,
         required:true   
     },
@@ -22,7 +22,7 @@ const productSchema = new mongoose.Schema({
         required:true
     },
     content:{
-        type:String,
+        type:String,           
         required:true
     },
     images:{
@@ -39,8 +39,8 @@ const productSchema = new mongoose.Schema({
         default:false
     },
     sold:{
-        type:Number,
-        default:0
+        type:Number,   
+        default:0    
     }
 },{   
     timestamps:true
